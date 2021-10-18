@@ -1,0 +1,248 @@
+:root {
+    /* FONTS */
+    --primary-fonts: 'Inter', sans-serif;
+
+
+    /* COLORS */
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: hsl(356, 69%, 56%);
+
+    --facebook: hsl(208, 92%, 53%);
+    --twitter: hsl(203, 89%, 53%);
+    --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+    --youTube: hsl(348, 97%, 39%);
+
+
+    /* DARK THEME */
+    --very-dark-blue-bg: hsl(230, 17%, 14%);
+    --very-dark-blue /* (Top BG Pattern) */: hsl(232, 19%, 15%);
+    --dark-desaturated-blue /* (Card BG) */: hsl(228, 28%, 20%);
+    --desaturated-blue /* (Text): h */: hsl(228, 34%, 66%);
+    --white /* (Text): h */: hsl(0, 0%, 100%);
+
+    /* LIGHT THEME */
+    --white-bg: hsl(0, 0%, 100%);
+    --very-pale-blue /* (Top BG Pattern)*/ : hsl(225, 100%, 98%);
+    --light-grayish-blue /* (Card BG) */: hsl(227, 47%, 96%);
+    --dark-grayish-blue /* (Text) */: hsl(228, 12%, 44%);
+    --Very-dark-blue /* (Text) */: hsl(230, 17%, 14%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+
+    background: var(--white-bg);
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+/* TOTAL FOLLOWERS */
+.total-followers {
+    height: 40%;
+    width: 80%;
+
+    background: transparent;
+
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.header {
+    width: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .switch-theme {
+    padding: 10px;
+    border-radius: 50%;
+
+    background: none;
+    color: var(--facebook);
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+}
+
+
+
+.header .switch-theme:hover {
+    background: var(--dark-grayish-blue);
+}
+
+.social-networks { 
+    height: 50%;
+    width: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+/* CARD */
+.card {
+    width: 20%;
+    height: 100%;
+
+    padding: 20px;
+
+    background: var(--light-grayish-blue);
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card .username {
+    font-size: 14px;
+}
+
+.card .followers {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.card.facebook-card {
+    border-top: 3px solid var(--facebook);
+}
+
+.card.twitter-card {
+    border-top: 3px solid var(--twitter);
+}
+
+.card.instagram-card {
+    border-top: 3px solid var(--youTube); /* CAMBIAR A INSTAGRAM */
+}
+
+.card.youtube-card {
+    border-top: 3px solid var(--youTube);
+}
+
+
+
+
+.total-update {
+    /* width: 80%; */
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+/* OVERVIEW TODAY */
+.overview-today {
+    height: 40%;
+    width: 80%;
+
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content:space-around;
+}
+
+.grid {
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.grid .card { 
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .left {
+    height: 100%;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.card .left .left-title {
+    font-size: 14px;
+    color: var(--dark-grayish-blue);
+}
+
+.card .left .left-text {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.card .rigth {
+    height: 100%;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+
+/* THEMES */
+.dark-theme {
+    background: var(--very-dark-blue-bg);
+    color: #fff;
+}
+
+.dark-theme-cards {
+    background: var(--dark-desaturated-blue);
+}
+
+
+
+.ligth-theme {
+
+}
+
+.ligth-theme-cards {
+    background: var(--light-grayish-blue);
+}
